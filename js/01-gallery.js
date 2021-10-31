@@ -27,7 +27,6 @@ function selectImg(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  
   let selectedImg = event.target.getAttribute("data-source");
 
 // import * as basicLightbox from 'basiclightbox'
