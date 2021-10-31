@@ -10,7 +10,7 @@ const listGalleryItem = galleryItems
         <img
           class="gallery__image"
           src="${preview}"
-          data-src="${original}"
+          data-source="${original}"
           alt="${description}"
         />
       </a>
@@ -24,7 +24,7 @@ galleryContainer.addEventListener("click", selectImg);
 
 function selectImg(event) {
   event.preventDefault();
-  if (event.target.nodeName !== "img") {
+  if (event.target.nodeName !== "IMG") {
     return;
   }
   
@@ -33,7 +33,7 @@ function selectImg(event) {
 // import * as basicLightbox from 'basiclightbox'
 
 const instance = basicLightbox.create(`
-    <img data-src="${selectedImg}" width="800" height="600">
+    <img src="${selectedImg}" width="800" height="600">
 `)
 
 instance.show();
